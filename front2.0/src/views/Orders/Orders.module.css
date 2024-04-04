@@ -1,0 +1,185 @@
+.orders-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+    background-color: transparent;
+    /* backdrop-filter: blur(5px); */
+    padding: 3rem;
+    gap: 2rem;
+    & .orders-container{
+        background-color: rgb(253, 44, 79);
+        color: white;
+        border-radius: 1rem;
+        padding: 1rem;
+        width: 70%;
+        & .orders-header{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            & h2{
+                font-size: 1.5rem;
+                text-align: center;
+            }
+            & select{
+                background-color: rgb(252, 17, 56);
+                padding: .5rem;
+                border: none;
+                border-radius: .5rem;
+            }
+        }
+        & .orders-main-row{
+            display: flex;
+            justify-content: space-evenly;
+            width: 80%;
+            margin: auto;
+            padding: 1rem;
+            background-color: rgb(252, 17, 56);
+            text-decoration: underline;
+            font-weight: bold;
+            border-radius: 1rem 1rem 0 0;
+        }
+        & span{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 10%;
+        }
+        & .order-description{
+            width: 40%;
+        }
+        & .orders-order-row{
+            display: flex;
+            justify-content: space-evenly;
+            width: 80%;
+            margin: auto;
+            padding: 1rem;
+        }
+        & .orders-order-row:nth-child(odd){
+            background-color: rgb(255, 76, 106);
+        }
+        & .orders-order-row:nth-child(even){
+            background-color: rgb(253, 126, 147);
+        }
+        & .orders-order-row:last-child{
+            border-radius: 0 0 1rem 1rem;
+        }
+        & button{
+            padding: .25rem;
+        }
+    }
+    & .orders-form{
+        background-color: rgb(253, 44, 79);
+        color: white;
+        border-radius: 1rem;
+        padding: 1rem;
+        width: 70%;
+        & h2{
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        & form{
+            background-color: rgb(253, 17, 57);
+            border-radius: 1rem;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            & .form-container{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
+                & div{
+                    width: 30%;
+                    padding: 1rem;
+                    text-align: center;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    & label{
+                        text-align: center;
+                        text-decoration: underline;
+                    }
+                    & label.required::before{
+                        content: '*';
+                        color: rgb(168, 17, 17);
+                    }
+                    & *::placeholder{
+                        color: gray;
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+                    & input{
+                        padding: .5rem;
+                        width: 50%;
+                        border-radius: .5rem;
+                        border: none;
+                        background-color: rgb(194, 25, 53);
+                    }
+                    & select{
+                        padding: .5rem;
+                        width: 50%;
+                        border-radius: .5rem;
+                        border: none;
+                        background-color: rgb(194, 25, 53);
+                    }
+                    & textarea{
+                        padding: .5rem;
+                        width: 50%;
+                        border-radius: .5rem;
+                        border: none;
+                        resize: none;
+                        background-color: rgb(194, 25, 53);
+                    }
+                }
+            }
+        }
+    }
+    & button{
+        margin: auto;
+        background-color: rgb(40, 40, 255);
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .orders-main{
+        padding: 1rem;
+        & .orders-container{
+            width: 95%;
+            overflow-x: scroll;
+            & .orders-main-row, .orders-order-row{
+                margin: auto;
+                width: 95%;
+                flex-wrap: wrap;
+                row-gap: 2rem;
+            }
+            & span{
+                min-width: 5rem;
+            }
+        }
+        & .orders-form{
+            width: 95%;
+            & form{
+                & .form-container{
+                    & div{
+                        flex-direction: column;
+                        justify-content: space-between;
+                        & input{
+                            min-width: 5rem;
+                            text-align: center;
+                        }
+                        & select, textarea{
+                            min-width: 7rem;
+                        }
+                        & label{
+                            padding: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.div{
+    margin: auto;
+    /* width: 99.2vw; */
+    background-color: rgb(74, 74, 253);
+    color: white;
+    text-align: center;
+    & a{
+        color: white;
+        text-decoration: underline;
+    }
+    & a:hover{
+        color: white;
+    }
+}

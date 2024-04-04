@@ -1,0 +1,74 @@
+.contact-main{
+    margin: 2rem;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    border-radius: 2rem;
+    border: solid 1px rgb(160, 160, 253);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2{
+        margin: 0;
+        font-size: 3rem;
+    }
+    & p{
+        font-size: 1.5rem;
+    }
+    & .cards-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        row-gap: 2rem;
+        padding: 2rem;
+        & a{
+            width: 40%;
+            text-align: center;
+            display: flex;
+            & caption{
+                width: 100%;
+                & img{
+                    width: 10vw;
+                    transition: all 0.3s ease-in-out;
+                }
+                & figcaption{
+                    color: white;
+                    font-weight: bolder;
+                    padding: 1rem;
+                }
+            }
+        }
+        & a:hover img{
+            filter: drop-shadow(0 0 1rem steelblue) drop-shadow(0 0 1rem steelblue) drop-shadow(0 0 1rem steelblue);
+            transform: scale(1.1);
+        }
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .contact-main{
+        margin: 1rem;
+        padding: 1rem;
+        gap: 2rem;
+        & p{
+            text-align: center;
+        }
+        & .cards-container{
+            & a{
+                & caption{
+                    & img{
+                        width: 20vw;
+                    }
+                    & figcaption{
+                        word-break: break-all;
+                        width: 100%;
+                        font-size: .7rem;
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
