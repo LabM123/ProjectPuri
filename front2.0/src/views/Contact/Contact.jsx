@@ -7,8 +7,12 @@ import mailIcon from '../../assets/mail-icon.svg'
 import phonIcon from '../../assets/phone-icon.svg'
 import githubIcon from '../../assets/github-icon.svg'
 import linkedinIcon from '../../assets/linkedin-icon.svg'
+import { useEffect } from "react";
 
 export default function Contact(){
+    useEffect(()=>{
+        document.title = 'Pureza Liquida | Contacto';
+    }, [])
     return(
         <>
         <NavBar/>
