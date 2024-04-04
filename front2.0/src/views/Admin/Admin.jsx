@@ -26,7 +26,7 @@ export default function Admin(){
     const [initialDate, setInitialDate] = useState(`${date.getUTCDate()}-${date.getUTCMonth()+1}-${date.getUTCFullYear()}`);
 
     useEffect(()=>{
-        axios.get('http://localhost:3000/orders')
+        axios.get('https://projectpuri.onrender.com/orders')
             .then(response => response.data)
             .then(data => {
                 setAllOrders(data);
@@ -101,7 +101,7 @@ export default function Admin(){
             cancelButtonText: 'Lo pienso mejor'
         }).then(result => {
             if(result.isConfirmed){
-                axios.put(`http://localhost:3000/orders/cancel/${id}`)
+                axios.put(`https://projectpuri.onrender.com/orders/cancel/${id}`)
                     .then(()=>{
                         Swal.fire({
                             title: 'Reparto Cancelado',
@@ -133,7 +133,7 @@ export default function Admin(){
             cancelButtonText: 'Lo pienso mejor'
         }).then(result => {
             if(result.isConfirmed){
-                axios.put(`http://localhost:3000/orders/finish/${id}`)
+                axios.put(`https://projectpuri.onrender.com/orders/finish/${id}`)
                     .then(()=>{
                         Swal.fire({
                             title: 'Reparto Terminado',
@@ -165,7 +165,7 @@ export default function Admin(){
             cancelButtonText: 'Lo pienso mejor'
         }).then(result => {
             if(result.isConfirmed){
-                axios.put(`http://localhost:3000/orders/activate/${id}`)
+                axios.put(`https://projectpuri.onrender.com/activate/${id}`)
                     .then(()=>{
                         Swal.fire({
                             title: 'Reparto Reactivado',

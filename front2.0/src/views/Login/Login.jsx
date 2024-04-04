@@ -35,7 +35,7 @@ export default function Login(){
     const handleSubmit = (event) => {
         event.preventDefault();
         if(newLogin.password && newLogin.email){
-            axios.post('http://localhost:3000/users/login', newLogin)
+            axios.post('https://projectpuri.onrender.com/users/login', newLogin)
                 .then((response) => {
                     dispatch(setGlobalUser(response.data))
                     setNewLogin(initialState);

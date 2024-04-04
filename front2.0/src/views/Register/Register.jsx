@@ -49,7 +49,7 @@ export default function Register(){
                 text: 'Ambas contraseñas deben ser iguales'
             })
         } else {
-            axios.post('http://localhost:3000/users/register', newUser)
+            axios.post('https://projectpuri.onrender.com/users/register', newUser)
                 .then(() => {
                     Swal.fire({
                         icon: 'success',

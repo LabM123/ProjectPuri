@@ -33,7 +33,7 @@ export default function Orders(){
     },[navigate, userData?.login, userData.user?.userType, dispatch])
     
     useEffect(()=>{
-        axios.get(`http://localhost:3000/users/${userData.user?._id}`)
+        axios.get(`https://projectpuri.onrender.com/users/${userData.user?._id}`)
             .then(response=>response.data)
             .then(data=>{
                 dispatch(setUser(data))
@@ -104,9 +104,9 @@ export default function Orders(){
             cancelButtonText: 'Lo pienso mejor'
         }).then(result => {
             if(result.isConfirmed){
-                axios.put(`http://localhost:3000/orders/cancel/${id}`)
+                axios.put(`https://projectpuri.onrender.com/orders/cancel/${id}`)
                     .then(()=>{
-                        axios.get(`http://localhost:3000/users/${userData.user?._id}`)
+                        axios.get(`https://projectpuri.onrender.com/users/${userData.user?._id}`)
                         .then(response=>response.data)
                         .then(data=>{
                             dispatch(setUser(data))
@@ -163,9 +163,9 @@ export default function Orders(){
                 text: 'Debes completar todos los campos requeridos'
             })
         } else {
-            axios.post('http://localhost:3000/orders/schedule', newOrder)
+            axios.post('https://projectpuri.onrender.com/orders/schedule', newOrder)
                 .then(()=>{
-                        axios.get(`http://localhost:3000/users/${userData.user?._id}`)
+                        axios.get(`https://projectpuri.onrender.com/users/${userData.user?._id}`)
                         .then(response=>response.data)
                         .then(data=>{
                             dispatch(setUser(data))

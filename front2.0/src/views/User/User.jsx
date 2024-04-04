@@ -91,9 +91,9 @@ export default function User(){
                 title: 'Debes completar ambos campos.'
             })
         } else {
-            axios.put('http://localhost:3000/users/email', newEmail)
+            axios.put('https://projectpuri.onrender.com/users/email', newEmail)
             .then(()=>{
-                axios.get(`http://localhost:3000/users/${userData.user?._id}`)
+                axios.get(`https://projectpuri.onrender.com/users/${userData.user?._id}`)
                 .then(response=>response.data)
                 .then(data=>{
                     dispatch(setUser(data))
@@ -125,9 +125,9 @@ export default function User(){
                 title: 'Debes completar ambos campos.'
             })
         } else {
-            axios.put('http://localhost:3000/users/phoneNum', newPhoneNum)
+            axios.put('https://projectpuri.onrender.com/users/phoneNum', newPhoneNum)
             .then(()=>{
-                axios.get(`http://localhost:3000/users/${userData.user?._id}`)
+                axios.get(`https://projectpuri.onrender.com/users/${userData.user?._id}`)
                 .then(response=>response.data)
                 .then(data=>{
                     dispatch(setUser(data))
@@ -159,9 +159,9 @@ export default function User(){
                 title: 'Debes completar ambos campos.'
             })
         } else {
-            axios.put('http://localhost:3000/users/password', newPassword)
+            axios.put('https://projectpuri.onrender.com/users/password', newPassword)
             .then(()=>{
-                axios.get(`http://localhost:3000/users/${userData.user?._id}`)
+                axios.get(`https://projectpuri.onrender.com/users/${userData.user?._id}`)
                 .then(response=>response.data)
                 .then(data=>{
                     dispatch(setUser(data))
