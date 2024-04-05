@@ -165,7 +165,7 @@ export default function Admin(){
             cancelButtonText: 'Lo pienso mejor'
         }).then(result => {
             if(result.isConfirmed){
-                axios.put(`https://projectpuri.onrender.com/activate/${id}`)
+                axios.put(`https://projectpuri.onrender.com/orders/activate/${id}`)
                     .then(()=>{
                         Swal.fire({
                             title: 'Reparto Reactivado',
